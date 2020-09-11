@@ -16,6 +16,6 @@ RUN apk -U add curl cargo portaudio-dev protobuf-dev libgcc \
  && rm -rf /etc/ssl /var/cache/apk/* /lib/apk/db/* /root/master.zip /root/librespot-master /root/.cargo
 
 ENV SPOTIFY_NAME Docker
-ENV SPOTIFY_DEVICE /data/fifo
+ENV SPOTIFY_DEVICE default
 
 CMD librespot -n "$SPOTIFY_NAME" -u "$SPOTIFY_USER" -p "$SPOTIFY_PASSWORD" --device "$SPOTIFY_DEVICE"
